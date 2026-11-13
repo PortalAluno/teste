@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<meta name="theme-color" content="#080b13" />
+<meta name="description" content="Raio-X do futuro do seu filho: um mapa inicial de interesses, criado a partir do que os responsáveis observam em casa." />
+<title>Microlins Experience · Raio-X do Futuro do Seu Filho</title>
+<style>
+:root{color-scheme:dark;--bg:#080b13;--panel:#121826;--panel2:#1b2130;--text:#f6f5f9;--muted:#a9aec1;--gold:#f5c65d;--gold2:#b88425;--blue:#608eff;--line:#30394b;--green:#58d3ad;--shadow:0 20px 70px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse 62% 35% at 16% -9%,#23295e77,transparent),radial-gradient(ellipse 50% 30% at 90% 10%,#5b3e171e,transparent),var(--bg);color:var(--text);font:16px/1.55 Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;min-height:100vh}button,input,select{font:inherit}button{cursor:pointer}button:disabled{opacity:.38;cursor:not-allowed}a{color:inherit}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.shell{max-width:1130px;margin:auto;padding:0 24px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:21px 0;border-bottom:1px solid #ffffff13}.brand{display:flex;align-items:center;gap:12px;font-weight:850;letter-spacing:.3px}.brand-mark{display:grid;place-items:center;color:#090b12;background:linear-gradient(135deg,#fff0ad,#cf9a3e);height:35px;width:35px;border-radius:11px;box-shadow:0 0 26px #d9a53740}.brand em{display:block;font-size:10px;color:var(--muted);font-style:normal;letter-spacing:2px;font-weight:700}.top-pill{font-size:12px;color:#b8c1d8;background:#ffffff08;border:1px solid var(--line);border-radius:100px;padding:6px 12px}
+main{min-height:calc(100vh - 150px)}.page{display:none;padding:54px 0 72px;animation:rise .33s ease both}.page.active{display:block}@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.eyebrow{text-transform:uppercase;color:var(--gold);font-size:12px;font-weight:900;letter-spacing:2px}.hero{display:grid;grid-template-columns:1.06fr .94fr;gap:48px;align-items:center;min-height:580px}.hero h1{font-size:clamp(38px,5.2vw,69px);letter-spacing:-2.8px;line-height:1.08;margin:16px 0 20px;font-weight:900}.goldtext{background:linear-gradient(108deg,#ffe9ad,#f0b53a 53%,#fff1b6);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{font-size:18px;color:var(--muted);max-width:610px}.actions{display:flex;flex-wrap:wrap;gap:14px;margin:28px 0}.btn{border:0;border-radius:15px;padding:15px 22px;font-weight:850;transition:transform .2s,filter .2s;display:inline-flex;justify-content:center;align-items:center;gap:10px;text-align:center;min-height:54px}.btn:hover:not(:disabled){transform:translateY(-2px);filter:brightness(1.06)}.btn.primary{color:#11131b;background:linear-gradient(120deg,#ffe29a,#e9b344);box-shadow:0 12px 30px #e3b54c32}.btn.secondary{background:#222a3c;color:white;border:1px solid #48516a}.btn.ghost{background:transparent;color:#aeb9d0;border:1px solid #353d52}.btn.block{width:100%}.subtle{color:var(--muted);font-size:13px}.hero-art{position:relative;min-height:480px;display:grid;place-items:center}.orb{position:absolute;border-radius:50%;width:330px;height:330px;background:radial-gradient(circle at 50% 40%,#334eb5dd,#101b3777 56%,transparent 70%);filter:blur(12px)}.showcase{position:relative;width:min(100%,430px);border:1px solid #ffffff28;background:linear-gradient(160deg,#19233dcb,#0e131fcc);border-radius:28px;box-shadow:var(--shadow),0 0 80px #365c8525;padding:28px;overflow:hidden}.showcase:before{content:"";position:absolute;inset:-90px -80px auto auto;width:240px;height:240px;background:#d5a64110;border-radius:50%;filter:blur(10px)}.showcase .planet{height:160px;border-radius:20px;display:grid;place-items:center;font-size:100px;background:radial-gradient(circle,#334e8c33,#121b2c);border:1px solid #5367a433;margin:18px 0}.mini-tabs{display:flex;gap:7px;flex-wrap:wrap}.mini-tabs span{font-size:11px;color:#d7dcf4;background:#57669535;padding:7px 10px;border-radius:9px}.statrow{display:flex;justify-content:space-between;gap:12px;color:#d8deec;font-size:12px}.bar{height:9px;border-radius:100px;background:#2f3b59;overflow:hidden}.bar div{height:100%;background:linear-gradient(90deg,#4e89f4,#dfb85b);border-radius:inherit}.small-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:34px}.feature{padding:17px 16px;background:#ffffff06;border:1px solid #ffffff14;border-radius:17px}.feature b{display:block;font-size:13px}.feature span{color:var(--muted);font-size:12px}
+.centered{max-width:790px;margin:auto}.card{background:linear-gradient(145deg,#171d2c,#101523);border:1px solid var(--line);border-radius:26px;padding:29px;box-shadow:var(--shadow)}.card+.card{margin-top:18px}.section-title{font-size:clamp(27px,3.3vw,42px);line-height:1.17;letter-spacing:-1.3px;margin:12px 0 11px}.caption{font-size:14px;color:var(--muted)}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0}.field{display:grid;gap:7px;text-align:left}.field label{font-weight:750;font-size:13px;color:#d4d9e9}.field input,.field select{background:#0d1320;border:1px solid #3b4963;color:white;border-radius:12px;padding:15px 14px;min-width:0;width:100%}.field select option{color:white;background:#111724}.line{height:1px;background:var(--line);margin:24px 0}.top-progress{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:13px}.progress{height:7px;border-radius:100px;background:#2b3451;overflow:hidden}.progress>div{height:100%;border-radius:100px;background:linear-gradient(90deg,#6a78fd,#f2c66c);transition:width .24s}.question{font-size:clamp(23px,3vw,33px);line-height:1.25;margin:30px 0 23px;letter-spacing:-.7px}.choices{display:grid;gap:11px}.choice{border:1px solid #3e475e;background:#151d2b;text-align:left;color:#eef0f8;border-radius:15px;padding:14px 17px;display:flex;gap:14px;align-items:flex-start;transition:.16s;font-weight:550}.choice:hover{border-color:#8d7b50;background:#1b2438}.choice.selected{border-color:var(--gold);background:#4b3b223b;box-shadow:inset 0 0 0 1px #e4ba6466}.letter{border:1px solid #67738a;border-radius:10px;display:grid;place-items:center;min-width:32px;height:32px;font-weight:900;color:#dce3f5}.choice.selected .letter{background:var(--gold);color:#0d101b;border-color:var(--gold)}.navrow{display:flex;justify-content:space-between;gap:12px;margin-top:24px}.timer{display:flex;align-items:center;gap:6px;font-variant-numeric:tabular-nums;color:var(--gold);font-size:14px;font-weight:800}.timer.ended{color:var(--green)}
+.result-head{display:grid;grid-template-columns:1fr auto;align-items:center;gap:20px}.pill{background:#4c3a1e80;border:1px solid #a77e3a;color:var(--gold);font-weight:800;letter-spacing:.4px;border-radius:100px;padding:7px 13px;display:inline-block;font-size:12px}.result-box{display:grid;grid-template-columns:1fr 1fr;gap:18px}.meter{display:grid;gap:8px;margin:12px 0}.meter-top{display:flex;justify-content:space-between;gap:12px;color:#e5e9f4;font-size:13px}.two-cols{display:grid;grid-template-columns:1fr 1fr;gap:18px}.tag{color:var(--gold);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:1px;margin-bottom:9px}.bullet{display:flex;gap:10px;margin:9px 0;color:#dee3ef}.bullet:before{content:"✓";font-weight:900;color:var(--green)}.notice{border:1px solid #665630;background:#5a471925;color:#dfd5bb;padding:14px 16px;border-radius:14px;font-size:13px;line-height:1.5}.notice.blue{background:#2440672b;border-color:#405b7d;color:#bbcee7}.print-only{display:none}
+.black-scene{display:grid;place-items:center;min-height:300px;perspective:900px;overflow:hidden;position:relative}.black-scene:before{content:"";position:absolute;width:350px;height:190px;background:radial-gradient(ellipse,#e2b5532a,transparent 70%);bottom:0;filter:blur(15px)}.blackbox{width:185px;height:175px;position:relative;transform:rotateX(-7deg) rotateY(-16deg);transition:transform .8s cubic-bezier(.2,.7,.1,1);filter:drop-shadow(0 22px 25px #000a)}.box-body{position:absolute;inset:0;background:linear-gradient(128deg,#303136,#0b0c0f 48%,#222327);border:2px solid #484442;border-radius:10px;box-shadow:inset -18px -6px 23px #000b,inset 6px 4px 15px #ffffff12}.box-body:after{content:"?";position:absolute;inset:25px 0;display:grid;place-items:center;font-size:88px;font-weight:900;color:var(--gold);text-shadow:0 0 24px #dbaa56a0}.box-lid{position:absolute;z-index:2;left:-8px;right:-8px;top:-18px;height:38px;background:linear-gradient(145deg,#3c3c3e,#0e0e11);border:2px solid #514734;border-radius:9px;transform-origin:5% 90%;transition:transform 1s ease}.blackbox.open .box-lid{transform:rotateZ(-37deg) translateY(-55px) translateX(-16px)}.blackbox.open{transform:rotateX(-4deg) rotateY(0) scale(1.05)}.sparkles{position:absolute;inset:0;pointer-events:none;display:none}.sparkles.show{display:block}.sparkles span{position:absolute;left:50%;top:50%;width:7px;height:12px;background:var(--gold);animation:burst 1.25s forwards;transform:translate(0,0)}@keyframes burst{to{opacity:0;transform:translate(var(--x),var(--y)) rotate(400deg)}}.black-content{display:none}.black-content.visible{display:block;animation:rise .45s ease both}
+.checkbox-line{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:#c9d2e4;margin:15px 0}.checkbox-line input{margin-top:5px;accent-color:var(--gold);width:17px;height:17px;flex:none}.book-form{max-width:540px}.admin-stat{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.admin-stat .feature strong{font-size:28px;display:block;color:#f8d88a}.footer{padding:24px 0 35px;border-top:1px solid #ffffff12;display:flex;align-items:center;justify-content:space-between;gap:20px;color:#8891a7;font-size:12px}.footer button{background:none;border:0;color:#aab5d0;text-decoration:underline;font-size:12px}
+@media(max-width:780px){.hero{grid-template-columns:1fr;gap:15px}.hero-art{min-height:310px}.showcase{width:100%}.showcase .planet{height:100px;font-size:60px}.small-grid{grid-template-columns:1fr}.result-box,.two-cols{grid-template-columns:1fr}.result-head{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.top-pill{display:none}.shell{padding:0 17px}.page{padding:34px 0 50px}.card{padding:22px 18px}.hero h1{letter-spacing:-1.6px}.navrow .btn{padding:13px 15px}.admin-stat{grid-template-columns:1fr 1fr}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@media print {body{background:white!important;color:black!important}.topbar,.footer,.no-print,.page:not(#page-result){display:none!important}#page-result{display:block!important;padding:0}.shell{max-width:none}.card{background:white!important;box-shadow:none;border:1px solid #ddd;color:#111;page-break-inside:avoid}.card *{color:#111!important}.pill{background:#eee!important}.print-only{display:block}.btn{display:none!important}.bar{background:#eee}.bar div{background:#777}.notice{border:1px solid #aaa!important;background:none!important}}
+.head-tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.admin-scroll{overflow:auto}.admin-table{border-collapse:collapse;min-width:780px;width:100%;font-size:13px}.admin-table th,.admin-table td{padding:12px 8px;text-align:left;border-bottom:1px solid #343a4c;vertical-align:middle}.admin-table th{color:var(--gold)}.admin-table select{max-width:130px;background:#1c2435;color:white;border:1px solid #526078;border-radius:8px;padding:6px}.btn.small{min-height:35px;padding:6px 11px;border-radius:8px;font-size:12px}textarea{background:#0d1320;border:1px solid #3b4963;border-radius:12px;color:white;padding:12px;max-width:100%}#admin-lead-detail{word-break:break-word}#admin-lead-detail p{white-space:pre-wrap}.footer button{font-size:12px}#page-admin .admin-stat{grid-template-columns:repeat(3,1fr)}.head-tools .top-pill:first-child{color:var(--gold);border-color:#795b24}@media(max-width:650px){.head-tools{justify-content:flex-end}.head-tools .top-pill{font-size:10px;padding:4px 8px}#page-admin .admin-stat{grid-template-columns:repeat(2,1fr)}.admin-stat strong{font-size:20px}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <header class="topbar no-print"><div class="brand"><span class="brand-mark">✦</span><span>MICROLINS <em>EXPERIENCE · CAMPO LIMPO</em></span></div><div class="head-tools"><span class="top-pill" id="global-timer" role="timer" aria-live="off" style="display:none">⏱ 10:00 restantes</span><span class="top-pill">Um primeiro mapa de interesses</span></div></header>
+  <main>
+    <section class="page active" id="page-home"><div class="hero"><div><div class="eyebrow">Raio-X do futuro do seu filho</div><h1>Seu filho tem interesses que você <span class="goldtext">talvez ainda não tenha percebido.</span></h1><p class="lead">Em 10 perguntas sobre o que você vê em casa, descubra quais interesses vale a pena explorar — e receba um convite para uma experiência na Microlins.</p><div class="actions"><button class="btn primary" onclick="startIntro()">Começar teste de carreira <span aria-hidden="true">→</span></button></div><p class="subtle">⏱ Até 10 minutos &nbsp; · &nbsp; Gratuito &nbsp; · &nbsp; Sem cadastro obrigatório</p><div class="small-grid"><div class="feature"><b>10 perguntas simples</b><span>Sobre hábitos observados em casa.</span></div><div class="feature"><b>Resultado no celular</b><span>Interesses e profissões para conhecer.</span></div><div class="feature"><b>BlackBox no final</b><span>Um convite para explorar mais.</span></div></div></div><div class="hero-art"><div class="orb"></div><div class="showcase"><div class="eyebrow">Meu mapa de possibilidades</div><div class="planet" aria-hidden="true">✧</div><div class="statrow"><b>Criatividade</b><span>Exemplo visual</span></div><div class="bar" style="margin:8px 0 14px"><div style="width:81%"></div></div><div class="statrow"><b>Investigação</b><span>Exemplo visual</span></div><div class="bar" style="margin:8px 0 20px"><div style="width:61%"></div></div><div class="mini-tabs"><span>Descoberta</span><span>Família</span><span>Futuro profissional</span></div></div></div></div><p class="notice">Este teste é exploratório e considera as percepções do responsável. Não é uma avaliação psicológica, não mede inteligência e não determina a profissão ideal.</p></section>
+    <section class="page" id="page-intro"><div class="centered"><div class="card"><span class="eyebrow">Antes de começar</span><h2 class="section-title">Vamos conhecer um pouco mais sobre seu filho.</h2><p class="caption">Você só precisa lembrar o que observa no dia a dia. Não é necessário conhecer seus planos profissionais.</p><div class="form-row"><div class="field"><label for="child-name">Primeiro nome ou apelido do filho (opcional)</label><input id="child-name" autocomplete="off" maxlength="50" placeholder="Ex.: Lucas" /></div><div class="field"><label for="child-age">Faixa etária</label><select id="child-age"><option value="">Selecione</option><option>10 a 12 anos</option><option>13 a 15 anos</option><option>16 a 17 anos</option><option>18 anos ou mais</option></select></div></div><p class="notice blue">O tempo estimado é de 10 minutos. Se ele acabar, você poderá concluir normalmente. Suas respostas são apenas observações iniciais e devem ser conversadas com seu filho.</p><div class="actions"><button class="btn primary" onclick="startQuiz()">Iniciar perguntas →</button><button class="btn ghost" onclick="go('home')">Voltar</button></div></div></div></section>
+    <section class="page" id="page-quiz"><div class="centered"><div class="card"><div class="top-progress"><span class="eyebrow" id="step-num">Pergunta 1 de 10</span><span class="timer" id="timer">◷ 10:00</span></div><div class="progress"><div id="progress-bar" style="width:10%"></div></div><h2 class="question" id="question-title"></h2><div id="choices" class="choices" role="group" aria-label="Respostas"></div><div class="navrow"><button class="btn ghost" onclick="previousStep()">← Anterior</button><button class="btn primary" id="next-btn" onclick="nextStep()" disabled>Próxima →</button></div><p class="subtle" style="margin:22px 0 0">Responda apenas o que você costuma observar. Você pode escolher “Não sei dizer”.</p></div></div></section>
+    <section class="page" id="page-result"><div class="centered"><div class="card"><div class="result-head"><div><span class="pill">✦ Mapa inicial de interesses</span><h2 class="section-title">Você acaba de olhar para seu filho de outra maneira.</h2><p class="caption" id="result-greeting"></p></div><span style="font-size:55px" aria-hidden="true">✧</span></div><div class="line"></div><div class="tag">Interesses que mais apareceram nas respostas</div><h3 id="result-title" style="font-size:27px;line-height:1.2;margin:5px 0 12px"></h3><p id="result-description"></p><div class="line"></div><div class="tag">Mapa das suas observações</div><div id="result-bars"></div><p class="subtle">Pontuação: quantidade de respostas relacionadas a cada interesse. Não representa aptidão científica.</p></div><div class="two-cols"><div class="card"><div class="tag">Possíveis pontos fortes a explorar</div><div id="result-strengths"></div></div><div class="card"><div class="tag">Três profissões para conhecer</div><div id="result-careers"></div></div></div><div class="card"><div class="tag">Desafio em família · 15 minutos</div><p id="result-activity"></p><div class="tag">Pergunta para conversar com seu filho</div><p id="result-conversation"></p></div><div class="card"><p class="notice">Resultado inicial gerado a partir das observações do responsável. Os interesses podem mudar e devem ser verificados com a própria criança ou jovem em diferentes experiências.</p><div class="actions no-print"><button class="btn primary" onclick="go('blackbox');trackOnce('blackbox')">Descobrir minha BlackBox →</button><button class="btn secondary" onclick="window.print()">Imprimir / salvar como PDF</button></div></div></div></section>
+    <section class="page" id="page-blackbox"><div class="centered"><div class="card" style="text-align:center"><div class="eyebrow">Surpresa desbloqueada</div><h2 class="section-title">Seu mapa é só o começo.</h2><p class="caption">Você descobriu possibilidades. Agora existe a oportunidade de explorá-las na prática.</p><div class="black-scene"><div class="sparkles" id="sparkles"></div><div class="blackbox" id="blackbox"><div class="box-lid"></div><div class="box-body"></div></div></div><div id="before-open"><button class="btn primary" onclick="openBox()">Abrir minha BlackBox ✦</button></div><div class="black-content" id="after-open"><span class="pill">✦ BlackBox revelada</span><h3 style="font-size:27px;margin:18px 0 8px">Um convite para conhecer novas possibilidades!</h3><p>Converse com a equipe da <b>Microlins Shopping Campo Limpo</b> sobre uma orientação profissional introdutória presencial, com atividades práticas para explorar interesses do seu filho.</p><p class="notice">A experiência presencial depende de confirmação da unidade. Esta BlackBox não representa dinheiro, desconto, prêmio físico ou vaga garantida.</p><div class="actions" style="justify-content:center"><button class="btn primary" onclick="go('book')">Reservar minha BlackBox →</button><button class="btn secondary" onclick="go('result')">Voltar ao resultado</button></div></div></div></div></section>
+    <section class="page" id="page-book"><div class="centered"><div class="card"><div class="eyebrow">Orientação profissional presencial</div><h2 class="section-title">Quer conhecer a experiência BlackBox?</h2><p class="caption">Você pode entrar em contato com a equipe da Microlins Shopping Campo Limpo. Esta etapa é opcional.</p><div class="notice">Você já recebeu seu resultado. Agora pode solicitar uma orientação presencial para seu filho. Com sua autorização, o nome e WhatsApp do responsável serão registrados para a equipe comercial acompanhar o agendamento.</div><div class="form-row"><div class="field"><label for="parent-name">Seu nome (responsável)</label><input id="parent-name" maxlength="80" autocomplete="name" placeholder="Seu nome" /></div><div class="field"><label for="parent-phone">Seu WhatsApp com DDD</label><input id="parent-phone" inputmode="tel" maxlength="20" autocomplete="tel" placeholder="(11) 99999-9999" /></div></div><label class="checkbox-line"><input type="checkbox" id="contact-consent" /> Autorizo a Microlins Shopping Campo Limpo a usar meu nome e WhatsApp para contato sobre a reserva da BlackBox. Sei que posso solicitar a exclusão desses dados. Sem esse consentimento, não haverá registro.</label><label class="checkbox-line"><input type="checkbox" id="answers-consent" /> Opcional: autorizo compartilhar com a equipe o perfil e as respostas sobre meu filho para personalizar a orientação.</label><p class="caption">Não pedimos o telefone da criança. Você poderá consultar o resultado sem agendar. Para excluir seu contato, fale com a unidade pelo WhatsApp.</p><div class="actions"><button class="btn primary" onclick="openWhatsapp()" id="book-submit">Registrar e abrir WhatsApp →</button><button class="btn ghost" onclick="go('result')">Ver meu resultado</button></div><p id="book-msg" class="subtle" aria-live="polite"></p></div></div></section>
+
+    <section class="page" id="page-admin"><div class="centered" style="max-width:1040px">
+      <div class="card" id="admin-login">
+        <span class="eyebrow">Acesso restrito à equipe autorizada</span><h2 class="section-title">Painel Microlins Experience</h2>
+        <p class="caption">Os dados são protegidos por autenticação e regras de acesso no banco. Use sua conta de administrador.</p>
+        <div class="form-row"><div class="field"><label for="admin-email">E-mail do administrador</label><input type="email" id="admin-email" autocomplete="username" placeholder="seu@email.com"></div><div class="field"><label for="admin-pass">Senha</label><input id="admin-pass" type="password" autocomplete="current-password" minlength="12" placeholder="Pelo menos 12 caracteres"></div></div>
+        <div class="actions"><button class="btn primary" onclick="adminSignIn()">Entrar</button><button class="btn secondary" onclick="adminSignUp()">Criar conta</button></div>
+        <p class="subtle" id="admin-login-info" role="status">A primeira conta deve ser ativada com um código único, que não aparece no aplicativo.</p>
+        <div id="admin-activation" hidden class="card" style="margin-top:18px"><div class="eyebrow">Ativação de propriedade</div><p class="caption">Insira o código único entregue ao proprietário da escola. Não divulgue.</p><div class="field"><input id="admin-code" type="password" autocomplete="off" placeholder="Código de ativação"></div><div class="actions"><button class="btn primary" onclick="adminActivate()">Ativar meu acesso</button></div></div>
+      </div>
+      <div id="admin-dashboard" hidden>
+        <div class="card"><div class="top-progress"><div><span class="eyebrow">Área administrativa</span><h2 class="section-title">Resultados e agendamentos</h2></div><button class="btn ghost" onclick="adminSignOut()">Sair</button></div>
+        <div class="form-row"><div class="field"><label for="admin-period">Período</label><select id="admin-period" onchange="renderAdmin()"><option value="7">Últimos 7 dias</option><option value="30" selected>Últimos 30 dias</option><option value="all">Todo o período</option></select></div><div class="field"><label for="admin-origin">Origem da campanha</label><select id="admin-origin" onchange="renderAdmin()"><option value="all">Todas</option></select></div></div>
+        <div class="admin-stat" id="admin-stats" aria-label="Indicadores reais"></div><p class="subtle">São registros recebidos pelo sistema, não garantias de visualização única ou de matrícula.</p>
+        </div>
+        <div class="card"><div class="top-progress"><h3>Interessados na BlackBox</h3><button class="btn secondary" onclick="adminCSV()">Exportar CSV</button></div><div id="admin-leads" class="admin-scroll"></div><div id="admin-lead-detail"></div></div>
+        <div class="card"><div class="tag">Configurações da unidade</div><div class="form-row"><div class="field"><label for="admin-wa">WhatsApp comercial (55 + DDD + número)</label><input id="admin-wa" inputmode="tel" placeholder="5511999999999"></div><div class="field"><label for="admin-unit">Nome da unidade</label><input id="admin-unit" maxlength="120"></div></div>
+          <label class="checkbox-line"><input id="admin-box-enabled" type="checkbox"> Permitir reservas da experiência BlackBox</label><div class="actions"><button class="btn primary" onclick="adminSaveSettings()">Salvar configurações</button></div>
+          <div class="notice">Link do teste para divulgar: <code id="admin-link"></code><p class="subtle">Crie QR Codes a partir desse link oficial depois que a publicação estiver confirmada.</p></div><div id="admin-msg" role="status" class="caption"></div>
+        </div>
+      </div>
+    </div></section>
+
+  </main>
+  <footer class="footer no-print"><span>Microlins Experience · Teste exploratório • Seus dados só são registrados com sua autorização</span><button onclick="go('admin');adminGate()">Área da equipe</button></footer>
+</div>
+<script>
+'use strict';
+const SUPA_URL = 'https://c--c2ecf110-2700-45be-8332-25229d6f1dec-prod.lovable.cloud';
+const SUPA_KEY = 'sb_publishable_RcexJbaATItAcF6gLgiNOg_VBus7WWw';
+let adminSession=null, adminLeads=[], adminEvents=[], adminSettings=null;
+const apiHeaders = (auth=false) => { const h={'apikey':SUPA_KEY,'Content-Type':'application/json','Accept':'application/json'}; if(auth&&adminSession?.access_token)h.Authorization='Bearer '+adminSession.access_token; return h; };
+async function remote(path,method='GET',body=null,auth=false,extra={}){
+  const opts={method,headers:{...apiHeaders(auth),...extra},cache:'no-store',credentials:'omit'};
+  if(body!==null)opts.body=JSON.stringify(body);
+  const res=await fetch(SUPA_URL+path,opts);
+  const raw=await res.text(); let data;try{data=JSON.parse(raw)}catch{data=raw}
+  if(!res.ok)throw new Error((data&& (data.message||data.msg||data.error_description||data.error))||('Erro de rede ('+res.status+')'));
+  return data;
+}
+function getOrigin(){return (new URLSearchParams(location.search).get('origem')||'direto').toLowerCase().replace(/[^a-z0-9-]/g,'-').slice(0,40)||'direto'}
+function getSid(){let k='mx_sid_secure';try{let id=sessionStorage.getItem(k);if(!id){id=crypto.randomUUID();sessionStorage.setItem(k,id)}return id}catch{return 'offline-'+Math.random().toString(36).slice(2)}}
+async function trackEvent(type){
+ try{const observed=st.answers.filter(n=>Number.isInteger(n)&&n>=0&&n<5).length;
+ const v=type==='complete'?compute():null;
+ await remote('/rest/v1/quiz_events','POST',{event_type:type,session_id:getSid(),origin:getOrigin(),age_band:st.age==="10 a 12 anos"?'10-12':st.age==="13 a 15 anos"?'13-15':st.age==="16 a 17 anos"?'16-17':st.age?'18+':null,profile:v&&v.leaders.length?v.leaders.map(i=>categories[i].title).join(' / ').slice(0,80):null,scores:v?v.counts:null},false,{Prefer:'return=minimal'})}catch(err){console.debug('Métricas indisponíveis:',err?.message)}
+}
+
+const Q=[
+['Quando seu filho está em casa, o que você mais vê ele fazendo no tempo livre?',['Desenhando, criando vídeos ou inventando coisas.','Jogando desafios, pesquisando ou tentando entender coisas.','Conversando, brincando ou interagindo com outras pessoas.','Organizando suas coisas ou planejando o que quer fazer.','Praticando esportes, cozinhando, montando ou mexendo em objetos.']],
+['Quando alguma coisa não dá certo, como seu filho costuma reagir?',['Inventa outra maneira de fazer.','Tenta entender por que deu errado.','Procura alguém para conversar ou pedir ajuda.','Tenta organizar melhor o que precisa fazer.','Vai tentando na prática até conseguir.']],
+['Quando você pede ajuda em alguma tarefa de casa, o que ele costuma fazer?',['Dá ideias para fazer de um jeito diferente.','Pergunta como ou por que aquilo funciona.','Prefere realizar a tarefa junto com alguém.','Organiza o que precisa ser feito primeiro.','Prefere começar logo e aprender fazendo.']],
+['Qual dessas atividades você mais percebe que seu filho faz por vontade própria?',['Criar desenhos, histórias, vídeos ou músicas.','Resolver jogos, pesquisar curiosidades ou desafios.','Conversar, brincar ou participar de grupos.','Planejar atividades, organizar coleções ou objetos.','Montar, construir, cozinhar ou praticar esportes.']],
+['Quando está com familiares ou amigos, o que você mais observa?',['Inventando brincadeiras ou histórias.','Fazendo perguntas ou tentando descobrir coisas.','Conversando e participando das atividades.','Organizando brincadeiras ou combinando o que vão fazer.','Participando de jogos de movimento ou atividades práticas.']],
+['O que seu filho costuma mostrar para você com orgulho?',['Algo que desenhou, criou ou inventou.','Um desafio que conseguiu resolver ou algo que descobriu.','Uma coisa boa que fez por outra pessoa.','Algo que conseguiu organizar ou planejar.','Algo que montou, preparou ou aprendeu a fazer.']],
+['Quando seu filho recebe algo novo, o que você costuma notar?',['Gosta de personalizar ou inventar outros usos.','Quer descobrir como funciona.','Mostra a novidade para outras pessoas.','Cuida, organiza e escolhe onde guardar.','Quer usar, experimentar ou testar imediatamente.']],
+['Quando vocês fazem alguma atividade juntos em casa, como ele mais participa?',['Sugere ideias diferentes e criativas.','Faz perguntas e procura entender os detalhes.','Gosta de conversar e colaborar com todos.','Ajuda a organizar as etapas ou os materiais.','Prefere colocar a mão na massa e executar.']],
+['Quando a família se reúne para um almoço ou uma festa, o que você mais percebe no seu filho?',['Gosta de inventar brincadeiras ou dar ideias diferentes.','Faz perguntas e demonstra curiosidade pelas coisas.','Gosta de conversar e interagir com as pessoas.','Gosta de organizar brincadeiras ou ajudar a planejar.','Prefere ajudar a preparar, montar ou realizar as atividades.']],
+['Quando vocês vão ao mercado ou a uma loja, o que você mais observa?',['Observa cores, produtos diferentes e coisas criativas.','Faz perguntas sobre os produtos ou como funcionam.','Gosta de conversar e interagir com as pessoas.','Presta atenção nos preços e gosta de escolher ou comparar.','Gosta de ajudar a pegar, separar ou carregar as compras.']]
+];
+const categories=[
+{title:'Criatividade e expressão',desc:'Seu filho parece demonstrar interesse por imaginar, personalizar e criar. Oferecer novas oportunidades de expressão pode ajudar vocês a descobrir do que ele realmente gosta.',strengths:['Inventar diferentes maneiras de apresentar ideias','Experimentar atividades visuais ou artísticas','Explorar projetos que envolvam expressão pessoal'],careers:['Design gráfico','Produção audiovisual','Design visual de jogos'],activity:'Criem juntos um cartaz ou vídeo curto sobre um tema de que ele goste. Observe se prefere desenhar, contar histórias ou escolher imagens.',talk:'Que parte dessa criação você mais gostou de fazer?'},
+{title:'Investigação e tecnologia',desc:'As respostas sugerem curiosidade por desafios, pesquisas e explicações. Isso pode ser explorado com jogos de lógica, experimentos e atividades digitais.',strengths:['Investigar como algo funciona','Experimentar jogos de raciocínio','Explorar problemas com várias soluções'],careers:['Programação','Ciências e pesquisa','Engenharia'],activity:'Escolham um enigma ou jogo de lógica e tentem resolvê-lo juntos. Pergunte como ele chegou às soluções.',talk:'Que tipo de problema você gostaria de tentar resolver de novo?'},
+{title:'Comunicação e colaboração',desc:'Seu filho parece se interessar por interações, conversas e atividades em conjunto. Vale experimentar situações em que ele possa compartilhar ideias e colaborar.',strengths:['Participar de atividades com outras pessoas','Compartilhar experiências','Colaborar em pequenos projetos'],careers:['Educação','Comunicação','Recursos humanos'],activity:'Proponha que ele organize uma brincadeira em família ou ensine algo que sabe. Observe se se sente à vontade com a atividade.',talk:'O que você mais gostou quando fizemos isso juntos?'},
+{title:'Organização e iniciativa',desc:'As observações indicam interesse por planejar, organizar e conduzir atividades. Pequenos desafios com metas podem ajudar a explorar esse interesse.',strengths:['Organizar ideias e materiais','Planejar etapas simples','Experimentar projetos com objetivos claros'],careers:['Administração','Logística','Gestão de projetos'],activity:'Montem uma lojinha fictícia: escolham produtos, etiquetas de preço e um orçamento imaginário.',talk:'Como você decidiu por onde começar e o que faria diferente?'},
+{title:'Atividades práticas',desc:'Seu filho parece gostar de experimentar, construir ou colocar a mão na massa. Atividades supervisionadas de montagem e experimentação podem abrir novas possibilidades.',strengths:['Experimentar ideias na prática','Trabalhar com objetos e materiais','Aprender por demonstração e repetição'],careers:['Robótica','Gastronomia','Áreas técnicas e manutenção'],activity:'Façam uma receita simples ou construam um objeto com materiais recicláveis, com supervisão adequada.',talk:'Você gostou mais de planejar ou de fazer a atividade?'}
+];
+const letters=['A','B','C','D','E','F'];
+const st={step:0,answers:Array(10).fill(null),name:'',age:'',deadline:0,started:false,finished:false,boxOpened:false};
+function saveState(){try{sessionStorage.setItem('microlins_public_v1',JSON.stringify(st))}catch{}}
+function restoreState(){try{let s=JSON.parse(sessionStorage.getItem('microlins_public_v1')||'null');if(s&&Array.isArray(s.answers)&&s.answers.length===10){Object.assign(st,s);}}catch{}}
+function getMetric(k){try{return Number(localStorage.getItem('mx_'+k)||'0')}catch{return 0}}
+function metric(k){try{localStorage.setItem('mx_'+k,String(getMetric(k)+1))}catch{}}
+function trackOnce(k){if(!st['tracked_'+k]){st['tracked_'+k]=true;metric(k);saveState()}}
+function go(page){const valid=['home','intro','quiz','result','blackbox','book','admin'];if(!valid.includes(page))page='home';document.querySelectorAll('.page').forEach(el=>el.classList.remove('active'));document.getElementById('page-'+page).classList.add('active');if(page==='quiz')renderQuiz();if(page==='result')renderResult();if(page==='blackbox')renderBox();if(page==='admin')adminGate();history.replaceState(null,'','#'+page);updateTimer();window.scrollTo({top:0,behavior:'instant'});}
+function startIntro(){if(!st.started){st.deadline=Date.now()+600000;st.started=true;metric('starts');trackEvent('start');saveState();}go('intro');updateTimer()}
+function startQuiz(){const age=document.getElementById('child-age').value;if(!age){alert('Selecione a faixa etária para continuar.');return;}st.age=age;st.name=document.getElementById('child-name').value.trim().slice(0,50);if(!st.started){st.deadline=Date.now()+600000;st.started=true;metric('starts');trackEvent('start')}saveState();go('quiz')}
+function renderQuiz(){const n=st.step;document.getElementById('step-num').textContent='PERGUNTA '+(n+1)+' DE 10';document.getElementById('progress-bar').style.width=((n+1)*10)+'%';document.getElementById('question-title').textContent=Q[n][0];const opts=[...Q[n][1],'Não sei dizer / nunca observei.'];document.getElementById('choices').innerHTML=opts.map((label,i)=>'<button class="choice '+(st.answers[n]===i?'selected':'')+'" aria-pressed="'+(st.answers[n]===i)+'" onclick="answer('+i+')"><span class="letter">'+letters[i]+'</span><span>'+label+'</span></button>').join('');const btn=document.getElementById('next-btn');btn.disabled=st.answers[n]===null;btn.innerText=n===9?'Ver meu resultado →':'Próxima →';updateTimer();}
+function answer(i){st.answers[st.step]=i;saveState();renderQuiz()}
+function previousStep(){if(st.step===0){go('intro');return}st.step--;saveState();renderQuiz()}
+function nextStep(){if(st.answers[st.step]===null)return;if(st.step<9){st.step++;saveState();renderQuiz();return;}st.finished=true;saveState();trackOnce('finishes');trackEvent('complete');go('result')}
+function updateTimer(){const el=document.getElementById('timer');const global=document.getElementById('global-timer');if(!st.started){if(global)global.style.display='none';return;}const remaining=Math.max(0,Math.ceil((st.deadline-Date.now())/1000));if(remaining===0){if(el){el.textContent='✓ Pode continuar no seu ritmo';el.classList.add('ended')}if(global){global.style.display=st.finished?'none':'inline';global.textContent='✓ Continue no seu ritmo'}}else{const val=String(Math.floor(remaining/60)).padStart(2,'0')+':'+String(remaining%60).padStart(2,'0');if(el){el.textContent='◷ '+val;el.classList.remove('ended')}if(global){global.textContent='⏱ '+val+' restantes';global.style.display=st.finished?'none':'inline'}}}
+function compute(){const counts=[0,0,0,0,0];st.answers.forEach(a=>{if(Number.isInteger(a)&&a>=0&&a<5)counts[a]++});const observed=counts.reduce((a,b)=>a+b,0);const max=Math.max(...counts);return{counts,observed,leaders:observed<5?[]:counts.map((v,i)=>v===max?i:-1).filter(i=>i>=0)}}
+function addBullets(where,items){document.getElementById(where).innerHTML=items.map(t=>'<div class="bullet">'+t+'</div>').join('')}
+function renderResult(){if(!st.finished){go('home');return;}const v=compute();const greeting=st.name?'Pelas suas observações, '+escapeHtml(st.name)+' apresenta estes interesses:':'Veja o que suas respostas sugerem como ponto de partida:';document.getElementById('result-greeting').innerHTML=greeting;document.getElementById('result-bars').innerHTML=categories.map((cat,i)=>'<div class="meter"><div class="meter-top"><b>'+cat.title+'</b><span>'+v.counts[i]+' de 10 observações</span></div><div class="bar"><div style="width:'+(v.counts[i]*10)+'%"></div></div></div>').join('');if(!v.leaders.length){document.getElementById('result-title').textContent='Ainda precisamos observar mais';document.getElementById('result-description').textContent='Menos de cinco respostas descreveram comportamentos observados. Em vez de adivinhar, converse com seu filho e experimente atividades variadas.';addBullets('result-strengths',['Observar o que desperta interesse espontâneo','Convidar para experimentar atividades diferentes','Conversar sem pressionar por uma profissão']);addBullets('result-careers',['Ainda não é adequado sugerir profissões específicas.','Reúna novas observações com seu filho.','Explore as áreas de forma aberta.']);document.getElementById('result-activity').textContent='Experimentem três pequenas atividades diferentes e observem de qual ele gosta mais.';document.getElementById('result-conversation').textContent='O que você gostaria de experimentar comigo?';return;}const top=v.leaders.slice(0,2);const c=categories[top[0]];document.getElementById('result-title').textContent=v.leaders.length>1?'Interesses em destaque: '+v.leaders.map(i=>categories[i].title).join(' · '):c.title;document.getElementById('result-description').textContent=c.desc+(v.leaders.length>2?' Há empate entre várias áreas; não existe um perfil único neste resultado.':'');addBullets('result-strengths',c.strengths);addBullets('result-careers',c.careers);document.getElementById('result-activity').textContent=c.activity;document.getElementById('result-conversation').textContent=c.talk;}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function renderBox(){document.getElementById('after-open').querySelector('.notice').textContent=adminSettings?.blackbox_active===false?'A orientação presencial está temporariamente indisponível para reserva. Consulte a equipe sobre novas datas.':'A experiência presencial depende de confirmação da unidade. Esta BlackBox não representa dinheiro, desconto, prêmio físico ou vaga garantida.';document.getElementById('blackbox').classList.toggle('open',st.boxOpened);document.getElementById('before-open').style.display=st.boxOpened?'none':'block';document.getElementById('after-open').classList.toggle('visible',st.boxOpened);}
+function openBox(){st.boxOpened=true;saveState();renderBox();const area=document.getElementById('sparkles');if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;area.innerHTML=Array.from({length:18},(_,i)=>{const angle=i*2*Math.PI/18;const x=Math.cos(angle)*(110+(i%4)*20);const y=Math.sin(angle)*(115+(i%3)*22);return '<span style="--x:'+x+'px;--y:'+y+'px;animation-delay:'+(i%4)*.04+'s"></span>'}).join('');area.classList.add('show');setTimeout(()=>area.classList.remove('show'),1600)}
+async function openWhatsapp(){
+ const name=document.getElementById('parent-name').value.trim();
+ const phoneRaw=document.getElementById('parent-phone').value.replace(/\D/g,'');
+ let phone=phoneRaw.length===11||phoneRaw.length===10?'55'+phoneRaw:phoneRaw;
+ const agree=document.getElementById('contact-consent').checked;
+ const share=document.getElementById('answers-consent').checked;
+ const msg=document.getElementById('book-msg'); const btn=document.getElementById('book-submit');
+ if(name.length<2){msg.textContent='Informe seu nome.';return}
+ if(!/^55\d{10,11}$/.test(phone)){msg.textContent='Digite um WhatsApp válido com DDD.';return}
+ if(!agree){msg.textContent='Para solicitar contato, confirme sua autorização.';return}
+ btn.disabled=true;msg.textContent='Registrando sua solicitação...';
+ const v=compute();let payload={parent_name:name.slice(0,80),phone,origin:getOrigin(),age_band:st.age==="10 a 12 anos"?'10-12':st.age==="13 a 15 anos"?'13-15':st.age==="16 a 17 anos"?'16-17':st.age?'18+':null,profile:v.leaders.length?v.leaders.map(i=>categories[i].title).join(' / ').slice(0,80):null,consent:true};
+ if(share){payload.child_nickname=st.name.slice(0,30)||null;payload.scores=v.counts;payload.answers=st.answers}
+ try{
+   await remote('/rest/v1/leads','POST',payload,false,{Prefer:'return=minimal'});
+   msg.textContent='Solicitação registrada. Abra o WhatsApp e envie sua mensagem para confirmar o contato.';
+   btn.textContent='Abrir WhatsApp →';btn.disabled=false;
+   const tel=adminSettings?.whatsapp||'5511939082787';
+   const text='Olá! Meu nome é '+name+'. Fiz o Raio-X do Futuro do Meu Filho e gostaria de agendar a experiência BlackBox na Microlins Shopping Campo Limpo.';
+   const url='https://wa.me/'+tel+'?text='+encodeURIComponent(text);
+   const oldLink=document.getElementById('wa-direct-link');if(oldLink)oldLink.remove();
+   const a=document.createElement('a');a.id='wa-direct-link';a.href=url;a.target='_blank';a.rel='noopener noreferrer';a.className='btn secondary';a.textContent='Abrir WhatsApp para enviar a mensagem';
+   document.getElementById('book-msg').insertAdjacentElement('afterend',a);
+   a.click();
+   btn.textContent='Solicitação registrada';btn.disabled=true;
+   metric('contacts');
+ }catch(err){
+   btn.disabled=false;msg.textContent='Não conseguimos registrar o contato agora. Tente novamente. Nenhum dado foi enviado ao WhatsApp automaticamente.';
+   console.warn('Registro indisponível:',err?.message);
+ }
+}
+
+// Admin console and public settings for Microlins Experience
+function adminNotice(msg){ const el=document.getElementById('admin-login-info'); if(el)el.textContent=msg; }
+function adminMessage(msg){const el=document.getElementById('admin-msg');if(el)el.textContent=msg;}
+function safeDate(d){ const dt=new Date(d);return Number.isFinite(dt.valueOf())?dt.toLocaleString('pt-BR'):'—'; }
+function restoreAdminSession(){
+  try {let raw=sessionStorage.getItem('mx_admin_session');if(!raw)return;
+    const s=JSON.parse(raw);if(s&&s.access_token&&s.user?.id){adminSession=s;}
+  }catch{adminSession=null}
+}
+function storeAdminSession(){
+  try{if(adminSession)sessionStorage.setItem('mx_admin_session',JSON.stringify(adminSession));else sessionStorage.removeItem('mx_admin_session')}catch{}
+}
+async function fetchSettingsPublic(){
+  try{const rows=await remote('/rest/v1/app_settings?select=unit_name,whatsapp,blackbox_active,benefit_text,privacy_text,public_url&id=eq.1');
+    if(Array.isArray(rows)&&rows[0])adminSettings=rows[0];
+  }catch(err){console.debug('Configuração não carregada:',err?.message)}
+}
+async function tryRefreshAdmin(){
+  if(!adminSession?.refresh_token)return false;
+  try{const r=await remote('/auth/v1/token?grant_type=refresh_token','POST',{refresh_token:adminSession.refresh_token});
+      if(!r?.access_token)return false;adminSession={...r,user:r.user||adminSession.user};storeAdminSession();return true;
+  }catch{adminSession=null;storeAdminSession();return false}
+}
+async function adminApi(path,method='GET',body=null,extra={}){
+  try{return await remote(path,method,body,true,extra)}catch(err){
+    if(/(401|JWT|expired|token)/i.test(String(err?.message))&&await tryRefreshAdmin()){
+      return await remote(path,method,body,true,extra);
+    }throw err;
+  }
+}
+async function ensureAdmin(){
+ if(!adminSession?.access_token || !adminSession?.user?.id)return false;
+ try{
+   let id=encodeURIComponent(adminSession.user.id);
+   let roles=await adminApi('/rest/v1/user_roles?select=role&user_id=eq.'+id);
+   return Array.isArray(roles)&&roles.some(row=>row.role==='admin');
+ }catch{ return false }
+}
+async function adminGate(){
+ const login=document.getElementById('admin-login');const dash=document.getElementById('admin-dashboard');
+ login.hidden=false;dash.hidden=true;
+ if(!adminSession){adminNotice('Faça login. A primeira conta precisa de um código de ativação privado.');return;}
+ adminNotice('Verificando acesso autorizado…');
+ if(await ensureAdmin()){
+   login.hidden=true;dash.hidden=false;await adminLoad();
+ }else{
+   document.getElementById('admin-activation').hidden=false;
+   adminNotice('Conta autenticada, mas ainda sem autorização administrativa. Use o código privado de ativação, se você for o proprietário.');
+ }
+}
+async function adminSignUp(){
+ const email=document.getElementById('admin-email').value.trim();const pwd=document.getElementById('admin-pass').value;
+ if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email))return adminNotice('Informe um e-mail válido.');
+ if(pwd.length<12)return adminNotice('Defina uma senha com pelo menos 12 caracteres.');
+ adminNotice('Criando conta…');
+ try{
+  const r=await remote('/auth/v1/signup','POST',{email,password:pwd});
+  if(r?.access_token && r?.user){adminSession=r;storeAdminSession();await adminGate();}
+  else adminNotice('Conta criada. Verifique seu e-mail e confirme o cadastro. Depois entre com sua senha para ativar o acesso.');
+ }catch(e){adminNotice('Não foi possível criar a conta: '+String(e?.message||'erro inesperado'))}
+}
+async function adminSignIn(){
+ const email=document.getElementById('admin-email').value.trim();const pwd=document.getElementById('admin-pass').value;
+ if(!email||!pwd)return adminNotice('Informe seu e-mail e sua senha.');
+ adminNotice('Entrando…');
+ try{
+  const r=await remote('/auth/v1/token?grant_type=password','POST',{email,password:pwd});
+  if(!r?.access_token||!r?.user?.id)throw new Error('Não foi possível validar o login.');
+  adminSession=r;storeAdminSession();await adminGate();
+ }catch(e){adminNotice('Falha no login: '+String(e?.message||'verifique os dados'))}
+}
+async function adminActivate(){
+ if(!adminSession?.access_token)return adminNotice('Primeiro faça login e confirme seu e-mail.');
+ const code=document.getElementById('admin-code').value;
+ if(code.length<32)return adminNotice('Código de ativação inválido.');
+ adminNotice('Validando código…');
+ try{const r=await adminApi('/rest/v1/rpc/claim_first_admin','POST',{p_code:code});
+   document.getElementById('admin-code').value='';
+   if(r!==true)throw new Error('Código inválido ou administrador já cadastrado.');
+   document.getElementById('admin-activation').hidden=true;await adminGate();
+ }catch(e){adminNotice('Não foi possível ativar: '+String(e?.message||'erro desconhecido'))}
+}
+function adminSignOut(){
+ const token=adminSession?.access_token;adminSession=null;storeAdminSession();
+ adminLeads=[];adminEvents=[];adminSettings=null;
+ if(token){remote('/auth/v1/logout','POST',null,false,{Authorization:'Bearer '+token}).catch(()=>{});}
+ document.getElementById('admin-dashboard').hidden=true;
+ document.getElementById('admin-login').hidden=false;
+ document.getElementById('admin-activation').hidden=true;
+ adminNotice('Sessão encerrada.');
+}
+async function adminLoad(){
+ adminMessage('Carregando dados…');
+ try{
+  const [leads,events,settings]=await Promise.all([
+   adminApi('/rest/v1/leads?select=id,created_at,origin,parent_name,phone,age_band,child_nickname,profile,scores,answers,status,notes,consent,consent_at&order=created_at.desc&limit=1000'),
+   adminApi('/rest/v1/quiz_events?select=id,created_at,event_type,session_id,origin&order=created_at.desc&limit=10000'),
+   adminApi('/rest/v1/app_settings?select=unit_name,whatsapp,blackbox_active,benefit_text,privacy_text,public_url&id=eq.1')
+  ]);
+  adminLeads=Array.isArray(leads)?leads:[];
+  adminEvents=Array.isArray(events)?events:[];
+  adminSettings=Array.isArray(settings)?settings[0]:null;
+  document.getElementById('admin-wa').value=adminSettings?.whatsapp||'';
+  document.getElementById('admin-unit').value=adminSettings?.unit_name||'Microlins Shopping Campo Limpo';
+  document.getElementById('admin-box-enabled').checked=!!adminSettings?.blackbox_active;
+  document.getElementById('admin-link').textContent=adminSettings?.public_url||location.href.split('#')[0];
+  const sel=document.getElementById('admin-origin'),prev=sel.value;
+  const origins=[...new Set([...adminEvents.map(x=>x.origin),...adminLeads.map(x=>x.origin)].filter(Boolean))].sort();
+  sel.innerHTML='<option value="all">Todas</option>'+origins.map(x=>'<option value="'+escapeHtml(x)+'">'+escapeHtml(x)+'</option>').join('');
+  sel.value=origins.includes(prev)?prev:'all';
+  renderAdmin();adminMessage('Dados atualizados.');
+ }catch(e){adminMessage('Não foi possível carregar os dados: '+String(e?.message||'erro inesperado'))}
+}
+function adminFiltered(){
+ const days=document.getElementById('admin-period').value;const origin=document.getElementById('admin-origin').value;
+ const since=days==='all'?0:Date.now()-Number(days)*86400000;
+ const ok=x=>(origin==='all'||x.origin===origin)&&(new Date(x.created_at).getTime()>=since);
+ return {leads:adminLeads.filter(ok),events:adminEvents.filter(ok)};
+}
+function safeDom(el,text){document.getElementById(el).textContent=text}
+function renderAdmin(){
+ const {leads,events}=adminFiltered();
+ const uniq=key=>new Set(events.filter(x=>x.event_type===key).map(x=>x.session_id)).size;
+ const starts=uniq('start'),completed=uniq('complete'),visits=uniq('visit'),asks=leads.length;
+ const countMat=leads.filter(x=>x.status==='matriculado').length;
+ const items=[['Visitantes',visits],['Testes iniciados',starts],['Testes concluídos',completed],['Reservas solicitadas',asks],['Comparecimentos',leads.filter(x=>x.status==='compareceu'||x.status==='matriculado').length],['Matrículas registradas',countMat]];
+ document.getElementById('admin-stats').innerHTML=items.map(([k,v])=>'<div class="feature"><b>'+escapeHtml(k)+'</b><strong>'+v+'</strong></div>').join('');
+ const target=document.getElementById('admin-leads');
+ if(!leads.length){target.innerHTML='<p class="notice blue">Nenhum interessado registrado neste período. Os dados aparecerão quando um responsável autorizar o contato.</p>';return}
+ const rows=leads.map(x=>{
+   const id=escapeHtml(x.id),name=escapeHtml(x.parent_name),profile=escapeHtml(x.profile||'—'),source=escapeHtml(x.origin||'direto');
+   const date=safeDate(x.created_at),phone=escapeHtml(maskAdminPhone(x.phone));
+   return '<tr><td>'+escapeHtml(date)+'</td><td>'+name+'</td><td>'+phone+'</td><td>'+source+'</td><td>'+profile+'</td><td><select aria-label="Status de '+name+'" onchange="adminStatus(\''+id+'\',this.value)">'+['novo','contato','agendado','compareceu','matriculado','nao_interessado'].map(v=>'<option value="'+v+'"'+(x.status===v?' selected':'')+'>'+({novo:'Novo',contato:'Em contato',agendado:'Agendado',compareceu:'Compareceu',matriculado:'Matriculado',nao_interessado:'Não interessado'}[v])+'</option>').join('')+'</select></td><td><button class="btn secondary small" onclick="adminViewLead(\''+id+'\')">Detalhes</button></td></tr>';
+ }).join('');
+ target.innerHTML='<table class="admin-table"><thead><tr><th>Data</th><th>Responsável</th><th>Contato</th><th>Origem</th><th>Perfil</th><th>Status</th><th>Ações</th></tr></thead><tbody>'+rows+'</tbody></table>';
+}
+function maskAdminPhone(v){const d=String(v||'');return d.length>=12?'+'+d.slice(0,2)+' ('+d.slice(2,4)+') *****-'+d.slice(-4):'***';}
+function adminViewLead(id){
+ const lead=adminLeads.find(x=>x.id===id);if(!lead)return;
+ const el=document.getElementById('admin-lead-detail');el.innerHTML='';
+ const wrap=document.createElement('div');wrap.className='card';wrap.style.marginTop='20px';
+ const head=document.createElement('h3');head.textContent='Atendimento: '+lead.parent_name;wrap.append(head);
+ const info=document.createElement('p');info.className='caption';info.textContent='WhatsApp: '+lead.phone+' · Origem: '+(lead.origin||'direto')+' · '+safeDate(lead.created_at);wrap.append(info);
+ const profile=document.createElement('p');profile.textContent='Perfil observado: '+(lead.profile||'Não informado')+' · Faixa etária: '+(lead.age_band||'não informada');wrap.append(profile);
+ if(lead.answers){const p=document.createElement('p');p.className='subtle';p.textContent='Respostas compartilhadas com autorização: '+JSON.stringify(lead.answers);wrap.append(p)}
+ const lab=document.createElement('label');lab.className='field';lab.textContent='Notas internas (não visíveis para responsáveis)';
+ const t=document.createElement('textarea');t.maxLength=2000;t.rows=3;t.style.width='100%';t.value=lead.notes||'';lab.append(t);wrap.append(lab);
+ const actions=document.createElement('div');actions.className='actions';
+ const save=document.createElement('button');save.className='btn primary';save.textContent='Salvar notas';save.onclick=()=>adminNotes(id,t.value);
+ const wa=document.createElement('a');wa.className='btn secondary';wa.textContent='Falar no WhatsApp';wa.target='_blank';wa.rel='noopener noreferrer';wa.href='https://wa.me/'+encodeURIComponent(lead.phone)+'?text='+encodeURIComponent('Olá, '+lead.parent_name+'! Somos da Microlins Shopping Campo Limpo. Recebemos seu pedido de orientação BlackBox.');
+ const del=document.createElement('button');del.className='btn ghost';del.textContent='Excluir contato';del.onclick=()=>adminDelete(id);
+ actions.append(save,wa,del);wrap.append(actions);el.append(wrap);
+}
+async function adminStatus(id,status){
+ if(!['novo','contato','agendado','compareceu','matriculado','nao_interessado'].includes(status))return;
+ try{await adminApi('/rest/v1/leads?id=eq.'+encodeURIComponent(id),'PATCH',{status},{Prefer:'return=minimal'});
+  const lead=adminLeads.find(x=>x.id===id);if(lead)lead.status=status;renderAdmin();adminMessage('Status atualizado.');
+ }catch(e){adminMessage('Erro ao atualizar status: '+e.message);renderAdmin()}
+}
+async function adminNotes(id,notes){
+ try{await adminApi('/rest/v1/leads?id=eq.'+encodeURIComponent(id),'PATCH',{notes:notes.slice(0,2000)},{Prefer:'return=minimal'});
+  const lead=adminLeads.find(x=>x.id===id);if(lead)lead.notes=notes.slice(0,2000);adminMessage('Notas salvas com sucesso.');
+ }catch(e){adminMessage('Erro ao salvar: '+e.message)}
+}
+async function adminDelete(id){
+ if(!confirm('Excluir permanentemente os dados deste responsável? Esta ação não poderá ser desfeita.'))return;
+ try{await adminApi('/rest/v1/leads?id=eq.'+encodeURIComponent(id),'DELETE',null,{Prefer:'return=minimal'});
+  adminLeads=adminLeads.filter(x=>x.id!==id);document.getElementById('admin-lead-detail').innerHTML='';renderAdmin();adminMessage('Contato excluído.');
+ }catch(e){adminMessage('Erro ao excluir: '+e.message)}
+}
+function adminCSV(){
+ const leads=adminFiltered().leads;
+ const headers=['data','responsavel','whatsapp','origem','faixa_etaria','perfil','status','notas'];
+ const csvv=v=>{let s=String(v??'');if(/^[\s]*[=+@\-]/.test(s))s="'"+s;return '"'+s.replace(/"/g,'""')+'"'};
+ const rows=leads.map(x=>[x.created_at,x.parent_name,x.phone,x.origin,x.age_band,x.profile,x.status,x.notes]);
+ const csv='\ufeff'+[headers,...rows].map(r=>r.map(csvv).join(';')).join('\r\n');
+ const a=document.createElement('a');const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));a.href=url;a.download='microlins_leads_'+new Date().toISOString().slice(0,10)+'.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1500);
+}
+async function adminSaveSettings(){
+ const whatsapp=document.getElementById('admin-wa').value.replace(/\D/g,'');
+ const unit=document.getElementById('admin-unit').value.trim();
+ const enabled=document.getElementById('admin-box-enabled').checked;
+ if(whatsapp&&!/^55\d{10,11}$/.test(whatsapp))return adminMessage('Informe WhatsApp com 55, DDD e número.');
+ if(unit.length<3||unit.length>120)return adminMessage('Informe o nome da unidade.');
+ try{await adminApi('/rest/v1/app_settings?id=eq.1','PATCH',{unit_name:unit,whatsapp:whatsapp||null,blackbox_active:enabled,updated_at:new Date().toISOString()},{Prefer:'return=minimal'});
+  adminSettings={...adminSettings,unit_name:unit,whatsapp,blackbox_active:enabled};adminMessage('Configurações salvas.');
+ }catch(e){adminMessage('Não foi possível salvar: '+e.message)}
+}
+
+restoreState();restoreAdminSession();fetchSettingsPublic();trackEvent('visit');const hash=location.hash.replace('#','');document.getElementById('child-name').value=st.name||'';document.getElementById('child-age').value=st.age||'';if(['result','blackbox'].includes(hash)&&st.finished)go(hash);else if(hash==='quiz'&&st.started)go('quiz');else if(hash==='admin')go('admin');else go('home');setInterval(()=>{if(st.started&&!st.finished)updateTimer()},1000);
+</script>
+</body>
+</html>
