@@ -248,12 +248,13 @@ async function adminLoad(){
  adminMessage('Carregando dados…');
  try{
   const [leads,events,settings]=await Promise.all([
-   adminApi('/rest/v1/leads?select=id,created_at,origin,parent_name,phone,age_band,child_nickname,profile,scores,answers,status,notes,consent,consent_at&order=created_at.desc&limit=1000'),
-   adminApi('/rest/v1/quiz_events?select=id,created_at,event_type,session_id,origin&order=created_at.desc&limit=10000'),
+   adminApi('/rest/v1/leads?select=id,created_at,origin,parent_name,phone,age_band,session_id,child_nickname,profile,scores,answers,status,notes,consent,consent_at&order=created_at.desc&limit=1000'),
+   adminApi('/rest/v1/quiz_events?select=id,created_at,event_type,session_id,origin,profile,scores,answers&order=created_at.desc&limit=10000'),
    adminApi('/rest/v1/app_settings?select=unit_name,whatsapp,blackbox_active,benefit_text,privacy_text,public_url&id=eq.1')
   ]);
-  adminLeads=Array.isArray(leads)?leads:[];
   adminEvents=Array.isArray(events)?events:[];
+  const completedBySid=new Map(adminEvents.filter(x=>x.event_type==='complete').map(x=>[x.session_id,x]));
+  adminLeads=(Array.isArray(leads)?leads:[]).map(lead=>{const completed=completedBySid.get(lead.session_id);return {...lead,profile:completed?.profile||lead.profile,scores:completed?.scores||lead.scores,answers:completed?.answers||lead.answers,finished:!!completed};});
   adminSettings=Array.isArray(settings)?settings[0]:null;
   document.getElementById('admin-wa').value=adminSettings?.whatsapp||'';
   document.getElementById('admin-unit').value=adminSettings?.unit_name||'Microlins Shopping Campo Limpo';
@@ -278,12 +279,12 @@ function renderAdmin(){
  const uniq=key=>new Set(events.filter(x=>x.event_type===key).map(x=>x.session_id)).size;
  const starts=uniq('start'),completed=uniq('complete'),visits=uniq('visit'),asks=leads.length;
  const countMat=leads.filter(x=>x.status==='matriculado').length;
- const items=[['Visitantes',visits],['Testes iniciados',starts],['Testes concluídos',completed],['Reservas solicitadas',asks],['Comparecimentos',leads.filter(x=>x.status==='compareceu'||x.status==='matriculado').length],['Matrículas registradas',countMat]];
+ const items=[['Visitantes',visits],['Testes iniciados',starts],['Testes concluídos',completed],['Responsáveis cadastrados',asks],['Comparecimentos',leads.filter(x=>x.status==='compareceu'||x.status==='matriculado').length],['Matrículas registradas',countMat]];
  document.getElementById('admin-stats').innerHTML=items.map(([k,v])=>'<div class="feature"><b>'+escapeHtml(k)+'</b><strong>'+v+'</strong></div>').join('');
  const target=document.getElementById('admin-leads');
  if(!leads.length){target.innerHTML='<p class="notice blue">Nenhum interessado registrado neste período. Os dados aparecerão quando um responsável autorizar o contato.</p>';return}
  const rows=leads.map(x=>{
-   const id=escapeHtml(x.id),name=escapeHtml(x.parent_name),profile=escapeHtml(x.profile||'—'),source=escapeHtml(x.origin||'direto');
+   const id=escapeHtml(x.id),name=escapeHtml(x.parent_name),profile=escapeHtml(x.profile||(x.finished?'Interesses em exploração':'Teste não concluído')),source=escapeHtml(x.origin||'direto');
    const date=safeDate(x.created_at),phone=escapeHtml(maskAdminPhone(x.phone));
    return '<tr><td>'+escapeHtml(date)+'</td><td>'+name+'</td><td>'+phone+'</td><td>'+source+'</td><td>'+profile+'</td><td><select aria-label="Status de '+name+'" onchange="adminStatus(\''+id+'\',this.value)">'+['novo','contato','agendado','compareceu','matriculado','nao_interessado'].map(v=>'<option value="'+v+'"'+(x.status===v?' selected':'')+'>'+({novo:'Novo',contato:'Em contato',agendado:'Agendado',compareceu:'Compareceu',matriculado:'Matriculado',nao_interessado:'Não interessado'}[v])+'</option>').join('')+'</select></td><td><button class="btn secondary small" onclick="adminViewLead(\''+id+'\')">Detalhes</button></td></tr>';
  }).join('');
@@ -296,7 +297,7 @@ function adminViewLead(id){
  const wrap=document.createElement('div');wrap.className='card';wrap.style.marginTop='20px';
  const head=document.createElement('h3');head.textContent='Atendimento: '+lead.parent_name;wrap.append(head);
  const info=document.createElement('p');info.className='caption';info.textContent='WhatsApp: '+lead.phone+' · Origem: '+(lead.origin||'direto')+' · '+safeDate(lead.created_at);wrap.append(info);
- const profile=document.createElement('p');profile.textContent='Perfil observado: '+(lead.profile||'Não informado')+' · Faixa etária: '+(lead.age_band||'não informada');wrap.append(profile);
+ const profile=document.createElement('p');profile.textContent='Perfil observado: '+(lead.profile||'Teste ainda não concluído')+' · Faixa etária: '+(lead.age_band||'não informada')+' · Teste: '+(lead.finished?'Concluído':'Em andamento');wrap.append(profile);if(lead.scores){const p=document.createElement('p');p.textContent='Mapa de interesses: '+JSON.stringify(lead.scores);wrap.append(p)}
  if(lead.answers){const p=document.createElement('p');p.className='subtle';p.textContent='Respostas compartilhadas com autorização: '+JSON.stringify(lead.answers);wrap.append(p)}
  const lab=document.createElement('label');lab.className='field';lab.textContent='Notas internas (não visíveis para responsáveis)';
  const t=document.createElement('textarea');t.maxLength=2000;t.rows=3;t.style.width='100%';t.value=lead.notes||'';lab.append(t);wrap.append(lab);
